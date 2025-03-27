@@ -13,7 +13,7 @@ module "eks" {
 
     #vpc
     vpc_id = module.vpc.vpc_id
-    subnet_ids = module.vpc.private_subnets
+    subnet_ids = module.vpc.public_subnets
 
     #node group defaults
     eks_managed_node_group_defaults = {
@@ -30,4 +30,5 @@ module "eks" {
       desired_size = 2
     }
   }
-}
+  
+  }
